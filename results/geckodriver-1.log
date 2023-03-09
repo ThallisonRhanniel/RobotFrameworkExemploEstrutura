@@ -1,0 +1,23 @@
+1678378025797	geckodriver	INFO	Listening on 127.0.0.1:52482
+1678378028885	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52483" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\THALLI~1\\AppData\\Local\\Temp\\rust_mozprofilezEvzt2"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1678378029273	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1678378029277	Marionette	INFO	Listening on port 52494
+Read port: 52494
+WebDriver BiDi listening on ws://127.0.0.1:52483
+1678378029482	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\THALLI~1\\AppData\\Local\\Temp\\rust_mozprofilezEvzt2\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52483/devtools/browser/735f80ab-a413-40e1-9f37-b687054beb68
+1678378032715	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+[2023-03-09T16:07:12Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-03-09T16:07:12Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-03-09T16:07:12Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-03-09T16:07:13Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-03-09T16:07:13Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-03-09T16:07:13Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-03-09T16:07:14Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-03-09T16:07:14Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+1678378133119	Marionette	INFO	Stopped listening on port 52494
+Dynamically enable window occlusion 1

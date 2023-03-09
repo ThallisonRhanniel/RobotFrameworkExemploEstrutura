@@ -1,119 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0 (Python 3.10.10 on win32)" generated="20230308 22:36:11.145" rpa="false" schemaversion="3">
-<suite id="s1" name="Test" source="C:\ProjectsTV\Robot\Tutorial\Test">
-<suite id="s1-s1" name="Bdd" source="C:\ProjectsTV\Robot\Tutorial\Test\bdd.robot">
-<test id="s1-s1-t1" name="Cenário 1: Executar vídeo no site do youtube" line="37">
-<kw name="Dado que eu acesso o site do youtube">
+<robot generator="Robot 6.0 (Python 3.10.10 on win32)" generated="20230309 13:23:55.763" rpa="false" schemaversion="3">
+<suite id="s1" name="ChamandoExemplo" source="C:\ProjectsTV\Robot\Tutorial\ExemplosSoltos\ChamandoExemplo.robot">
+<test id="s1-t1" name="Teste do IF" line="6">
+<kw name="Acessar o site e logar com o Perfil admin" library="ExemploIF" sourcename="Acessar o site e logar com o Perfil ${perfil}">
+<if>
+<branch type="IF" condition="&quot;${perfil}&quot;==&quot;admin&quot;">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<arg>${Browser}</arg>
+<arg>https://www.youtube.com/</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230308 22:36:11.351" level="INFO">Opening browser 'chrome' to base url 'https://www.youtube.com/'.</msg>
-<status status="PASS" starttime="20230308 22:36:11.350" endtime="20230308 22:36:16.206"/>
-</kw>
-<status status="PASS" starttime="20230308 22:36:11.350" endtime="20230308 22:36:16.206"/>
-</kw>
-<kw name="Quando digito o nome da música">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${Input_Pesquisa}</arg>
-<arg>${NomeDaMusica}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230308 22:36:16.209" level="INFO">Typing text 'Ariana Grande Positions' into text field '//input[@id="search"]'.</msg>
-<status status="PASS" starttime="20230308 22:36:16.207" endtime="20230308 22:36:16.460"/>
-</kw>
-<status status="PASS" starttime="20230308 22:36:16.207" endtime="20230308 22:36:16.461"/>
-</kw>
-<kw name="E Clico no botão buscar">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Button_Pesquisa}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230308 22:36:16.462" level="INFO">Clicking element '//button[@id="search-icon-legacy"]'.</msg>
-<status status="PASS" starttime="20230308 22:36:16.462" endtime="20230308 22:36:16.766"/>
-</kw>
-<status status="PASS" starttime="20230308 22:36:16.461" endtime="20230308 22:36:16.767"/>
-</kw>
-<kw name="E clico na primeira opcão da lista">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Primeiro_Videos}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230308 22:36:16.767" endtime="20230308 22:36:18.174"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Primeiro_Videos}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230308 22:36:18.175" level="INFO">Clicking element '(//yt-formatted-string[@class="style-scope ytd-video-renderer"])[1]'.</msg>
-<status status="PASS" starttime="20230308 22:36:18.174" endtime="20230308 22:36:18.458"/>
-</kw>
-<status status="PASS" starttime="20230308 22:36:16.767" endtime="20230308 22:36:18.458"/>
-</kw>
-<kw name="Então o video é executado">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Prova}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230308 22:36:18.459" endtime="20230308 22:36:19.553"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${Prova}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230308 22:36:19.587" level="INFO">Element '(//span[contains(text(),"Compartilhar")])[1]' is displayed.</msg>
-<status status="PASS" starttime="20230308 22:36:19.553" endtime="20230308 22:36:19.587"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230308 22:36:22.588" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230308 22:36:19.588" endtime="20230308 22:36:22.588"/>
+<msg timestamp="20230309 13:23:55.965" level="INFO">Opening browser 'firefox' to base url 'https://www.youtube.com/'.</msg>
+<msg timestamp="20230309 13:23:55.966" level="INFO">Firefox driver log is always forced to to: C:\ProjectsTV\Robot\Tutorial\results\geckodriver-7.log</msg>
+<status status="PASS" starttime="20230309 13:23:55.964" endtime="20230309 13:24:05.121"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230308 22:36:22.588" endtime="20230308 22:36:24.779"/>
+<status status="PASS" starttime="20230309 13:24:05.122" endtime="20230309 13:24:07.849"/>
 </kw>
-<status status="PASS" starttime="20230308 22:36:18.459" endtime="20230308 22:36:24.779"/>
-</kw>
-<tag>regressivo</tag>
-<status status="PASS" starttime="20230308 22:36:11.349" endtime="20230308 22:36:24.780"/>
-</test>
-<status status="PASS" starttime="20230308 22:36:11.167" endtime="20230308 22:36:24.782"/>
-</suite>
-<suite id="s1-s2" name="Estrutura" source="C:\ProjectsTV\Robot\Tutorial\Test\estrutura.robot">
-<test id="s1-s2-t1" name="Cenário 1: Abrindo navegador e indo para o google" line="20">
-<kw name="Abrir Site do Robot">
+<status status="PASS" starttime="20230309 13:23:55.964" endtime="20230309 13:24:07.849"/>
+</branch>
+<branch type="ELSE">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://robotframework.org/</arg>
-<arg>chrome</arg>
+<arg>https://www.google.com/</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230308 22:36:24.791" level="INFO">Opening browser 'chrome' to base url 'https://robotframework.org/'.</msg>
-<status status="PASS" starttime="20230308 22:36:24.790" endtime="20230308 22:36:29.094"/>
+<status status="NOT RUN" starttime="20230309 13:24:07.850" endtime="20230309 13:24:07.850"/>
 </kw>
-<status status="PASS" starttime="20230308 22:36:24.790" endtime="20230308 22:36:29.094"/>
-</kw>
-<kw name="Fechar navegador">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230308 22:36:29.095" endtime="20230308 22:36:31.208"/>
+<status status="NOT RUN" starttime="20230309 13:24:07.850" endtime="20230309 13:24:07.850"/>
 </kw>
-<status status="PASS" starttime="20230308 22:36:29.095" endtime="20230308 22:36:31.208"/>
+<status status="NOT RUN" starttime="20230309 13:24:07.849" endtime="20230309 13:24:07.850"/>
+</branch>
+<status status="PASS" starttime="20230309 13:23:55.964" endtime="20230309 13:24:07.850"/>
+</if>
+<status status="PASS" starttime="20230309 13:23:55.964" endtime="20230309 13:24:07.850"/>
 </kw>
-<tag>regressivo</tag>
-<status status="PASS" starttime="20230308 22:36:24.789" endtime="20230308 22:36:31.209"/>
+<status status="PASS" starttime="20230309 13:23:55.963" endtime="20230309 13:24:07.851"/>
 </test>
-<status status="PASS" starttime="20230308 22:36:24.784" endtime="20230308 22:36:31.210"/>
-</suite>
-<status status="PASS" starttime="20230308 22:36:11.147" endtime="20230308 22:36:31.213"/>
+<test id="s1-t2" name="Testando o if com o IFInline" line="9">
+<kw name="Acessar o site com IfLine admin" library="ExemploIF" sourcename="Acessar o site com IfLine ${perfil}">
+<if>
+<branch type="IF" condition="&quot;${perfil}&quot;==&quot;admin&quot;">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.youtube.com/</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230309 13:24:07.854" level="INFO">Opening browser 'firefox' to base url 'https://www.youtube.com/'.</msg>
+<msg timestamp="20230309 13:24:07.854" level="INFO">Firefox driver log is always forced to to: C:\ProjectsTV\Robot\Tutorial\results\geckodriver-8.log</msg>
+<status status="PASS" starttime="20230309 13:24:07.853" endtime="20230309 13:24:19.612"/>
+</kw>
+<status status="PASS" starttime="20230309 13:24:07.853" endtime="20230309 13:24:19.612"/>
+</branch>
+<branch type="ELSE">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.google.com/</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="NOT RUN" starttime="20230309 13:24:19.613" endtime="20230309 13:24:19.613"/>
+</kw>
+<status status="NOT RUN" starttime="20230309 13:24:19.612" endtime="20230309 13:24:19.613"/>
+</branch>
+<status status="PASS" starttime="20230309 13:24:07.853" endtime="20230309 13:24:19.613"/>
+</if>
+<status status="PASS" starttime="20230309 13:24:07.853" endtime="20230309 13:24:19.613"/>
+</kw>
+<status status="PASS" starttime="20230309 13:24:07.852" endtime="20230309 13:24:19.614"/>
+</test>
+<status status="PASS" starttime="20230309 13:23:55.765" endtime="20230309 13:24:19.616"/>
 </suite>
 <statistics>
 <total>
 <stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="2" fail="0" skip="0">regressivo</stat>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Test">Test</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Bdd">Test.Bdd</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s2" name="Estrutura">Test.Estrutura</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="ChamandoExemplo">ChamandoExemplo</stat>
 </suite>
 </statistics>
 <errors>

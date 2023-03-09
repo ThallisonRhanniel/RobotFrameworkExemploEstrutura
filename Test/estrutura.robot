@@ -18,6 +18,7 @@ Fechar navegador
 
 ** Test Cases **
 Cenário 1: Abrindo navegador e indo para o google
+    [Tags]    regressivo
     Abrir Site do Robot
     Fechar navegador
 
